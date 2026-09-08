@@ -11,8 +11,10 @@
     "type-check": "vue-tsc --build",
     "format:fix": "prettier --write --list-different .",
     "format:check": "prettier --check src/",
-    "fix": "npm run format:fix",
-    "check": "npm run format:check"
+    "lint:fix": "eslint . --fix --cache",
+    "lint:check": "eslint . --cache",
+    "fix": "run-s format:fix lint:fix",
+    "check": "run-s format:check lint:check"
   },
   "dependencies": {
     "vue": "^3.5.40",
@@ -22,7 +24,11 @@
     "@tsconfig/node24": "^24.0.4",
     "@types/node": "^24.13.3",
     "@vitejs/plugin-vue": "^6.0.8",
+    "@vue/eslint-config-prettier": "^10.2.0",
+    "@vue/eslint-config-typescript": "^14.9.0",
     "@vue/tsconfig": "^0.9.1",
+    "eslint": "^10.10.0",
+    "eslint-plugin-vue": "^10.11.0",
     "npm-run-all2": "^9.0.2",
     "prettier": "^3.9.6",
     "typescript": "~6.0.0",
