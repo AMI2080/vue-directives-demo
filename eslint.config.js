@@ -21,6 +21,7 @@ export default defineConfigWithVueTs(
     },
     rules: {
       'tailwindcss/no-custom-classname': 'off',
+      'vue/component-name-in-template-casing': ['error', 'kebab-case'],
     },
   },
   skipFormatting
