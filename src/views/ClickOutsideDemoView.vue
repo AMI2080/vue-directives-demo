@@ -10,7 +10,8 @@ const close = (event: Event): void => {
   lastEvent.value = event.type;
 };
 
-const reopen = (): void => {
+const reopen = (event: Event): void => {
+  event.stopPropagation();
   open.value = true;
   lastEvent.value = '—';
 };
