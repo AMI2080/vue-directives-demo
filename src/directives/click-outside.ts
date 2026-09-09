@@ -11,6 +11,7 @@ interface ClickOutsideElement extends HTMLElement {
 const resolveEventName = (binding: DirectiveBinding): string => {
   if (binding.modifiers.mousedown) return 'mousedown';
   if (binding.modifiers.mouseup) return 'mouseup';
+  if (binding.modifiers.dblclick) return 'dblclick';
   return 'click';
 };
 
