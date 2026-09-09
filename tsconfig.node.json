@@ -9,6 +9,10 @@
     "eslint.config.*"
   ],
   "compilerOptions": {
+    // Override node24 defaults so older editor TypeScript accepts the config.
+    "lib": ["ES2022"],
+    "target": "ES2022",
+
     // Most tools use transpilation instead of Node.js's native type-stripping.
     // Bundler mode provides a smoother developer experience.
     "module": "ESNext",
